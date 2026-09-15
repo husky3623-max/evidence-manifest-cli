@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "evidence-manifest-cli"
+version = "0.1.0"
+description = "Create and verify privacy-conscious SHA-256 manifests offline"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "husky3623-max" }]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+]
+[project.scripts]
+evidence-manifest = "evidence_manifest.cli:main"
+[tool.setuptools]
+package-dir = {"" = "src"}
+[tool.setuptools.packages.find]
+where = ["src"]
